@@ -3,12 +3,14 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 const path = require('path')
 
+const isDevelopment = process.env.NODE_ENV !== 'production'
+
 module.exports = {
   context: path.resolve(__dirname, 'frontend'),
   entry: {
     frontend: './index.jsx'
   },
-  mode: 'development',
+  mode: isDevelopment ? 'development' : 'production',
   module: {
     rules: [
       {
@@ -17,8 +19,8 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           plugins: [
-            require.resolve('react-refresh/babel')
-          ]
+            isDevelopment && require.resolve('react-refresh/babel')
+          ].filter(Boolean)
         }
       },
       {
@@ -43,8 +45,8 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: 'index.html'
     }),
-    new ReactRefreshWebpackPlugin()
-  ],
+    isDevelopment && new ReactRefreshWebpackPlugin()
+  ].filter(Boolean),
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'build')

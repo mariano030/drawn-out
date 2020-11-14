@@ -5,7 +5,7 @@ const store = configureStore({
   reducer: {
     chat: chatReducer
   },
-  devTools: true
+  devTools: process.env.NODE_ENV !== 'production'
 })
 
 export default store
