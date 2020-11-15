@@ -8,7 +8,7 @@ const Lobby = () => {
   const dispatch = useDispatch()
   return (
     <>
-      <h1>Hello, welcome to the Lobby? Super.</h1>
+      <h1>Get ready...</h1>
       <Button onClick={() => dispatch(message({ text: 'Hello' }))}>Test</Button>
       <ul>
         {messages.map((message, i) => {

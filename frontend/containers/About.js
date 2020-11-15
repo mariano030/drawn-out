@@ -1,6 +1,7 @@
 import React from 'react'
 
-const About = () => {
+const About = (props) => {
+  console.log(props.history)
   return (
     <h1>sponsored by apple</h1>
   )

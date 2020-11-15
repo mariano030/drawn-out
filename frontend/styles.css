@@ -1,4 +1,96 @@
+/* reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+  
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* end reset */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 body {
-  margin: 10em;
-  background-color: salmon;
+  background-color: #e8e8e8;
+  font-family: 'Rubik', sans-serif;
+}
+
+a {
+  color: #2a4179;
+}
+
+
+
+/* COLORS */
+
+#c1 {
+    background-color: #e8e8e8;
+}
+
+#c2 {
+    background-color: #2a4179;
+}
+
+#c3 {
+    background-color: #1f8a70;
+}
+
+#c4 {
+    background-color: #bedb39;
+}
+
+#c5 {
+    background-color: rgba(255, 225, 26, 1);
+}
+
+#c6 {
+    background-color: #fd7400;
+}
+
+#c7 {
+    background-color: #f83016;
+}
+
+#c8 {
+    background-color: #76240f;
+}
+
+#c9 {
+    background-color: #1c1b1b;
+}
+
+#bg-c1 {
+    background-color: #e8e8e8;
+}
+
+#bg-c2 {
+    background-color: #c1292e;
+}
+
+#bg-c3 {
+    background-color: #457d56;
+}
+
+#bg-c4 {
+    background-color: #437c90;
+}
+
+#bg-c5 {
+    background-color: #1c1b1b;
 }

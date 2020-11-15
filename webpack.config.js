@@ -8,13 +8,13 @@ const isDevelopment = process.env.NODE_ENV !== 'production'
 module.exports = {
   context: path.resolve(__dirname, 'frontend'),
   entry: {
-    frontend: './index.jsx'
+    frontend: './index.js'
   },
   mode: isDevelopment ? 'development' : 'production',
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
@@ -34,11 +34,12 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js']
   },
   devServer: {
     contentBase: './build',
     hot: true,
+    historyApiFallback: true
   },
   plugins: [
     new CleanWebpackPlugin(),
